@@ -14,13 +14,16 @@
 }
 .navl{
     width: 100%;
-    height: 5px;
-    background-image: linear-gradient(to right, rgb(55, 18, 142),rgb(121, 20, 254));
-    
+    height: 10px;
+    background-image: linear-gradient(to right, rgb(0, 17, 255),rgb(20, 153, 254)); 
+    position: relative;
+}
+.glow{
+    filter: blur(20px);
 }
 .main{
     width: 100%;
-    height: 2500px;
+    height: max-content;
     background: linear-gradient(to top,rgb(23, 23, 23),black);
     background-attachment: fixed;
 }
@@ -41,17 +44,24 @@
     text-align: center;
 }
 .txtb{
+    font-family: "Anta", serif;
+    font-weight: 400;
+    font-style: normal;
     font-size: 80px;
     text-align: center;
-    padding-top: 60px;
+    padding-top: 20px;
     display: inline-block;
 }
 .txts{
-    width: 70%;
+    font-family: "Anta", serif;
+    width: 60%;
     font-size: 30px;
+    font-weight: bolder;
     text-align: center;             
-    padding-top: 40px;
+    padding: 30px;
+    margin-top: 20px;
     display: inline-block;
+    background: linear-gradient(to left,rgba(0, 0, 0, 0)50%,rgb(28, 28, 28));
 }
 .txtimg{
     display: inline;
@@ -60,7 +70,7 @@
 .line{
     width: 50%;
     height: 5px;
-    background: linear-gradient(to right,rgb(62, 0, 128),rgb(187, 0, 255));
+    background: linear-gradient(to left, rgb(122, 199, 255),rgb(20, 153, 254));
     margin-left: 25%;
     margin-top: 50px;
 }
@@ -71,12 +81,9 @@
 }
 .container{
     position:relative;
-    background-image: url(cloud-8598424.jpg);
-    filter: hue-rotate(10deg);
     background-size: cover;
-    background-position: 0px , 30px;
     width: 100%;
-    height: 600px;
+    height: 500px;
 }
 .heading{
     font-size: 100px;
@@ -110,6 +117,7 @@
     font-size: 50px;
     text-align: center;
     display: inline-block;
+    margin-left: 40px;
 }
 .rd{
     transform: translate(0px,12px);
@@ -148,24 +156,121 @@
    padding-top: 25px;
    padding-bottom: 25px;
 }
-.navm{
+.vid{
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    transform: rotateY(180deg);
+    filter: hue-rotate(-20deg);
     position: absolute;
-    width: 60px;
-    height: 60px;
-    border-radius: 10%;
-    filter: invert(1);
-    margin-top: 20px;
+    z-index: -1;
+}
+#imgd{
+    position: absolute;
+    display: inline-block;
+    margin-top: 10%;
+    margin-left: 65%;
+}
+.nav{
+    position: absolute;
+    display: inline-block;
+    height: 50px;
+    width: 550px;
+    margin-top: 1%;
+    margin-left: 60%;
+    text-align: right;
+}
+.navel{
+    padding: 10px;
+    width: 100px;
+    height: fit-content;
+    border-radius: 5%;
+    background-color: transparent;
+    border: 0;
+    color: White;
+    display: inline-block;
     margin-left: 20px;
     text-align: center;
+    font-size: 15px;
+    font-weight: bolder;
 }
-.navm:hover{
-    background-color: rgb(232, 232, 232);
+.navel:hover{
+    background-color: white;
+    color: black;
     transition: ease-in-out;
-    transition-duration: .2s;
-    filter: invert(1);
+    transition-duration: .3s;
+    filter: drop-shadow( 0px 0px 10px rgba(0,0,0,.3));
 }
-.weltxt{
+.cloud{
+    font-size: 100px;
+    display: inline-block;
+    background-image: linear-gradient(to top,rgb(0, 64, 255),rgb(0, 179, 255),white);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+.empty{
+    width: 100%;
+    height: 500px;
+}
+.dline{
+    display: inline-block;
+    width: 250px;
+    height:max-content;
+    background-image: linear-gradient(to right,rgb(8, 46, 0),rgb(161, 255, 114));
+    -webkit-background-clip: text;
+    color: transparent;
+    background-size: 200% 50%;
+    animation: gradanim 2s linear infinite;
+    transform: translate(0px,20px);
+}
+@keyframes gradanim{
+    0%{
+        background-position: 200% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+}
+#ndline{
+    display: inline-block;
+}
+.dbox{
+    display: inline-block;
+    height:max-content;
+    width: 300px;
+}
+.mel{
+    display: inline-block;
+    padding: 30px;
+    height:max-content;
+    width: max-content;
+    text-align: center;
+    border: 2px solid white;
+    border-radius: 5px;
+}
+.wel{
+
     position: absolute;
-    margin-left: 40%;
-    font-size: 60px;
+    display: inline-block;
+    margin-top: 22%;
+    margin-left: 52%;
+    font-family: "Anta", serif;
+    width: 60%;
+    font-size: 30px;
+    font-weight: bolder;
+    text-align: center;
+}
+.rev{
+    background-image: linear-gradient(to right,rgb(9, 210, 255),rgba(7, 66, 169, 0.956));
+    animation: gradanimrev 2s linear infinite;
+    background-size: 200% 50%;
+    
+}
+@keyframes gradanimrev{
+    0%{
+        background-position: 0% 50%;
+    }
+    100%{
+        background-position: 200% 50%;
+    }
 }
